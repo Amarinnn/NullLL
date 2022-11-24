@@ -1,0 +1,7 @@
+#hd .navbar-expand-lg.fancy:not(.fixed) .navbar-collapse-wrapper {
+    margin-top: 1rem !important;
+}
+
+#opc {
+    background-color: rgba(255, 255, 255, 0.2);
+}
