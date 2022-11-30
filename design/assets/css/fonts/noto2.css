@@ -7,8 +7,9 @@
 }
 
 body {
-  font-family: 'Open Sans', AppleSDGothicNeo, 'Noto Sans KR', sans-serif;
-  font-size: .85rem
+  font-family: 'Open Sans', AppleSDGothicNeo, 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  font-size: .70rem;
+  font-weight: 400;
 }
 
 .btn,
@@ -32,7 +33,7 @@ body {
 .btn-sm,
 .post-meta,
 .share-dropdown .dropdown-menu .dropdown-item {
-  font-size: .75rem
+  font-size: .70rem
 }
 
 .filter,
