@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var data = {
+            //"b_no": ["2208162517"],
+            "start_dt" :["20000101"]
+             // 사업자번호 "xxxxxxx" 로 조회 시,
+           }; 
+           
+           
+        $.ajax({
+          url: "https://api.odcloud.kr/api/nts-businessman/v1/status?serviceKey=WTuu0W1dJ4sq7hoRYcDCgKcHRQUaf6UajpAF8xtP%2Fv8PGrKCBEEhgvR5kauONv8s9PxPVjClHgy2mjAzNxB%2Fyw%3D%3D",  // serviceKey 값을 xxxxxx에 입력
+          type: "POST",
+          data: JSON.stringify(data), // json 을 string으로 변환하여 전송
+          dataType: "JSON",
+          contentType: "application/json",
+          accept: "application/json",
+          success: function(result) {
+              console.log(result.data);
+          },
+          error: function(result) {
+              console.log(result.responseText); //responseText의 에러메세지 확인
+          }
+        });
+    </script>
+</body>
+<button>사업자번호확인</button>
+</html>
