@@ -9,7 +9,11 @@
   <meta name="keywords"
     content="bootstrap 5, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
   <meta name="author" content="elemis">
-  <title>search</title>
+  <title>search-result</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script type="text/javascript" src="./assets/jQCloud-master/dist/jqcloud.min.js"></script>
+
+
   <link rel="shortcut icon" href="./assets/img/favicon.png">
   <link rel="stylesheet" href="./assets/css/plugins.css">
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -17,21 +21,32 @@
 
   <!--mycss-->
   <link rel="stylesheet" href="./assets/css/jy.css">
-  <script>
-    function showSpinner() {
-      document.getElementsByClassName('layerPopup')[0].style.display = 'block';
-    }
-    function hideSpinner() {
-      document.getElementsByClassName('layerPopup')[0].style.display = 'none';
-    }
-  </script>
+
+  <!--jqcloud-->
+  <link rel="stylesheet" href="./assets/jQCloud-master/dist/jqcloud.min.css">
 
 </head>
 
 <body>
-  <div class="layerPopup">
-    <div class="spinner"></div>
-  </div>
+
+  <script>
+
+    $(document).ready(function () {
+      var words = [
+        { text: "Lorem", weight: 13 },
+        { text: "Ipsum", weight: 10.5 },
+        { text: "Dolor", weight: 9.4 },
+        { text: "Sit", weight: 8 },
+        { text: "Amet", weight: 6.2 },
+        { text: "Consectetur", weight: 5 },
+        { text: "Adipiscing", weight: 5 }
+        // ...as many words as you want
+      ];
+
+      $("#wdcloud").jQCloud(words);
+    });
+  </script>
+
   <div class="content-wrapper">
     <header class="wrapper">
       <nav class="navbar navbar-expand-lg center-nav navbar-light navbar-bg-light">
@@ -139,7 +154,7 @@
       <div class="container pt-17 pb-20 pt-md-15 pb-md-21 text-center">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h1 class="display-1 mb-3 text-gradient gradient-2">Search Your Best!</h1>
+            <h1 class="display-1 mb-3 text-gradient gradient-2">Search Result</h1>
           </div>
           <!-- /column -->
         </div>
@@ -154,81 +169,60 @@
           <div class="col-lg-12 col-xl-12 col-xxl-12 mx-auto mt-n20">
             <div class="card">
               <div class="card-body text-center">
-                <form method="post">
-                  <div class="row row-cards ">
-                    <div class="col-lg-8 mx-auto">
-                      <div class="form-floating mb-0" id="mysearch">
-                        <input id="search-form " type="text" class="form-control" placeholder="Search">
-                        <label for="search-form">Search</label>
-                        <i class="uil uil-search float-end mt-n8 me-4 fs-20 text-ash"></i>
-                      </div>
+                <div class="row">
+                  <div class="col card me-2">
+                    <div class="card-body">
+                      <ul class="progress-list">
+                        <li>
+                          <p>Marketing</p>
+                          <div class="progressbar line blue" data-value="100"></div>
+                        </li>
+                        <li>
+                          <p>Strategy</p>
+                          <div class="progressbar line green" data-value="80"></div>
+                        </li>
+                        <li>
+                          <p>Development</p>
+                          <div class="progressbar line red" data-value="85"></div>
+                        </li>
+                        <li>
+                          <p>Stabilization</p>
+                          <div class="progressbar line yellow" data-value="75"></div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                  <div class="row row-cards mt-5">
-                    <div class="col-lg-12 mx-auto card shadow-none bg-soft-sky">
-                      <div class="card-body text-start">
-                        <div class="row">
-                          <div class="col-8">
-                            <div class="btn btn-sm btn-outline-sky rounded-pill mb-2">
-                              <input class="form-check-input" type="radio" name="radio2" id="radio1" checked>
-                              <label class="form-check-label" for="radio1">&nbsp;&nbsp;기획재정부&nbsp;</label>
-                              <span class="badge bg-blue rounded-pill">20</span>
-                            </div>
-                            <div class="dropdown d-in">
-                              <button class="btn btn-sm btn-outline-sky rounded-pill mb-2 dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <input class="form-check-input" type="radio" name="radio2" id="radio2">
-                                <label class="form-check-label" for="radio2">&nbsp;&nbsp;과학기술정보통신부&nbsp;</label>
-                                <span class="badge bg-blue rounded-pill">56</span>
-                              </button>
-                              <ul class="dropdown-menu px-2 ">
-                                <li>
-                                  <input class="form-check-input " type="radio" name="ddradio" id="ddradio1">
-                                  <label class="form-check-label" for="ddradio1">radio </label>
-                                  <span class="badge bg-blue rounded-pill">20</span>
-                                </li>
-                                <li>
-                                  <input class="form-check-input" type="radio" name="ddradio" id="ddradio2">
-                                  <label class="form-check-label" for="ddradio2">radio2 </label>
-                                  <span class="badge bg-blue rounded-pill">3</span>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="btn btn-sm btn-outline-sky rounded-pill mb-2">
-                              <input class="form-check-input" type="radio" name="radio2" id="radio3">
-                              <label class="form-check-label" for="radio3"> &nbsp;&nbsp;교육부&nbsp;</label>
-                              <span class="badge bg-blue rounded-pill">20</span>
-                            </div>
-                            <div class="btn btn-sm btn-outline-sky rounded-pill mb-2">
-                              <input class="form-check-input" type="radio" name="radio2" id="radio4">
-                              <label class="form-check-label" for="radio4"> &nbsp;&nbsp;외교부&nbsp;</label>
-                              <span class="badge bg-blue rounded-pill">20</span>
-                            </div>
-                            <div class="btn btn-sm btn-outline-sky rounded-pill mb-2">
-                              <input class="form-check-input" type="radio" name="radio2" id="radio5">
-                              <label class="form-check-label" for="radio5"> &nbsp;&nbsp;통일부&nbsp;</label>
-                              <span class="badge bg-blue rounded-pill">20</span>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <p class="">하위기관목록</p>
-                            <p class="">list</p>
-                          </div>
-                        </div>
-
-                      </div>
+                  <div class="col card me-2">
+                    <div class="card-body">
+                      <div id="wdcloud" class="w-100 h-100"></div>
                     </div>
                   </div>
-                  <div class="row row-cards mt-5 ">
-                    <div class="col-lg-8 mx-auto">
-                      <button class="btn btn-gradient gradient-7 rounded-pill w-50 ">sumit</button>
-                    </div>
-                  </div>
-                </form>
+                </div>
                 <!--/.card-body -->
+                <div class=" row mt-2">
+                  <div class="card card-border-start border-primary">
+                    <div class="card-body text-sm-start py-2">
+                      상위기관명 > 하위기관명<br>
+                      <a href="#" class="fs-lg">Title</a>
+                      <p class="">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                        been
+                        the industry's standard
+                        dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                        scrambled it
+                        to make a type specimen
+                        book. It has survived not only five centuries, but also the leap into electronic
+                        typesetting,
+                        remaining essentially...
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <!--/.card -->
+
             </div>
+
             <!-- /column -->
           </div>
           <!-- /.row -->
@@ -262,6 +256,8 @@
   </div>
   <script src="./assets/js/plugins.js"></script>
   <script src="./assets/js/theme.js"></script>
+
+
 </body>
 
 </html>
