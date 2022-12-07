@@ -143,44 +143,112 @@
             <div class="card">
               <div class="card-body text-center">
                 <div class="row row-cards ">
-                  <h2 class="text-gradient gradient-7 fs-20 text-uppercase text-line text-start mb-4 ms-4">회원정보 수정</h2>
-                  <form class="text-start mb-3">
-                    <div class="form-floating mb-4 ">
-                      <input type="text" class="form-control w-75 float-start me-lg-5" placeholder="Name"
-                        id="loginName">
-                      <label for="loginName">ID *</label>
-                      <a href="#" class="btn btn-soft-primary btn-sm rounded-pill ">아이디
-                        중복확인
-                      </a>
+                  <h2 class="text-gradient gradient-7 fs-20 text-uppercase text-line text-start mb-4 ms-4">내가 쓴 글</h2>
+                  <div class="col">
+                    <div class="row card mt-3 ">
+                      <div class="col card-body overflow-auto py-4" style="max-height: 600px;">
+                        <div class="row wrapper-border py-2">
+                          <div class="col text-start">
+                            <p class="small text-ash m-0">${date}</p>
+                          </div>
+                          <div class="col-8 text-start">
+                            ${title}
+                          </div>
+                          <div class="col">
+                            <a href="#" class="btn btn-sm btn-outline-warning  float-end">삭제</a>
+                          </div>
+                        </div>
+                        <div class="row wrapper-border py-2">
+                          <div class="col text-start">
+                            <p class="small text-ash m-0">${date}</p>
+                          </div>
+                          <div class="col-8 text-start">
+                            ${title}
+                          </div>
+                          <div class="col">
+                            <a href="#" class="btn btn-sm btn-outline-warning  float-end">삭제</a>
+                          </div>
+                        </div>
+                        <div class="row wrapper-border py-2">
+                          <div class="col text-start">
+                            <p class="small text-ash m-0">${date}</p>
+                          </div>
+                          <div class="col-8 text-start">
+                            ${title}
+                          </div>
+                          <div class="col">
+                            <a href="#" class="btn btn-sm btn-outline-warning  float-end">삭제</a>
+                          </div>
+                        </div>
+                        <div class="row wrapper-border py-2">
+                          <div class="col text-start">
+                            <p class="small text-ash m-0">${date}</p>
+                          </div>
+                          <div class="col-8 text-start">
+                            ${title}
+                          </div>
+                          <div class="col">
+                            <a href="#" class="btn btn-sm btn-outline-warning  float-end">삭제</a>
+                          </div>
+                        </div>
+                        <div class="row wrapper-border py-2">
+                          <div class="col text-start">
+                            <p class="small text-ash m-0">${date}</p>
+                          </div>
+                          <div class="col-8 text-start">
+                            ${title}
+                          </div>
+                          <div class="col">
+                            <a href="#" class="btn btn-sm btn-outline-warning  float-end">삭제</a>
+                          </div>
+                        </div>
+                        <div class="row wrapper-border py-2">
+                          <div class="col text-start">
+                            <p class="small text-ash m-0">${date}</p>
+                          </div>
+                          <div class="col-8 text-start">
+                            ${title}
+                          </div>
+                          <div class="col">
+                            <a href="#" class="btn btn-sm btn-outline-warning  float-end">삭제</a>
+                          </div>
+                        </div>
+                        <div class="row wrapper-border py-2">
+                          <div class="col text-start">
+                            <p class="small text-ash m-0">${date}</p>
+                          </div>
+                          <div class="col-8 text-start">
+                            ${title}
+                          </div>
+                          <div class="col">
+                            <a href="#" class="btn btn-sm btn-outline-warning  float-end">삭제</a>
+                          </div>
+                        </div>
+                        <div class="row wrapper-border py-2">
+                          <div class="col text-start">
+                            <p class="small text-ash m-0">${date}</p>
+                          </div>
+                          <div class="col-8 text-start">
+                            ${title}
+                          </div>
+                          <div class="col">
+                            <a href="#" class="btn btn-sm btn-outline-warning  float-end">삭제</a>
+                          </div>
+                        </div>
+                        <div class="row wrapper-border py-2">
+                          <div class="col text-start">
+                            <p class="small text-ash m-0">${date}</p>
+                          </div>
+                          <div class="col-8 text-start">
+                            ${title}
+                          </div>
+                          <div class="col">
+                            <a href="#" class="btn btn-sm btn-outline-warning  float-end">삭제</a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="form-floating">
-                      <p class="ms-4 mb-2 text-start small fw-bold">아이디 중복확인을 진행해주세요.</p>
-                    </div>
-                    <div class="form-floating mb-4">
-                      <input type="email" class="form-control" placeholder="Email" id="loginEmail">
-                      <label for="loginEmail">Email *</label>
-                    </div>
-                    <div class="form-floating password-field mb-4">
-                      <input type="password" class="form-control" placeholder="Password" id="loginPassword">
-                      <span class="password-toggle"><i class="uil uil-eye"></i></span>
-                      <label for="loginPassword">비밀번호 *</label>
-                    </div>
-                    <div class="form-floating password-field mb-4">
-                      <input type="password" class="form-control" placeholder="Confirm Password"
-                        id="loginPasswordConfirm">
-                      <span class="password-toggle"><i class="uil uil-eye"></i></span>
-                      <label for="loginPasswordConfirm">비밀번호 확인</label>
-                    </div>
-                    <div class="form-floating mb-4">
-                      <input type="text" class="form-control" placeholder="닉네임" id="nick">
-                      <label for="loginEmail">닉네임 *</label>
-                    </div>
-                    <div class="form-floating mb-2">
-                      <input type="text" class="form-control" placeholder="회사명" id="company">
-                      <label for="company">가입된 기업회원이 있다면 회사명을 정확히 기입해주세요.</label>
-                    </div>
-                    <a class="btn btn-primary rounded-pill btn-login w-100 mb-2 mt-5">회원가입</a>
-                  </form>
+                  </div>
                 </div>
               </div>
             </div>
